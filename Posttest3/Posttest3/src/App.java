@@ -43,13 +43,11 @@ public class App {
                     if (pilihTambah == 1) {
                         System.out.println("\nMasukkan Nama Alat");
                         String namaAlat = sc.nextLine();
-                        System.out.println("Masukkan Merk Alat");
-                        String merkAlat = sc.nextLine();
                         System.out.println("Masukkan Harga");
                         int hargaAlat = sc.nextInt();
                         System.out.println("Masukkan Stok");
                         int stokAlat = sc.nextInt();
-                        Alat alatBaru = new Alat(namaAlat, merkAlat, hargaAlat, stokAlat);
+                        Alat alatBaru = new Alat(namaAlat, hargaAlat, stokAlat);
                         dataAlat.add(alatBaru);
                         System.out.println("\nData alat berhasil ditambahkan!");
                     } else if (pilihTambah == 2) {
@@ -132,9 +130,6 @@ public class App {
 
                         System.out.println("Masukkan Nama Alat Baru");
                         dataAlat.get(ubahAlat - 1).setNama(sc.nextLine());
-
-                        System.out.println("Masukkan Merk Alat Baru");
-                        dataAlat.get(ubahAlat - 1).setMerkAlat(sc.nextLine());
 
                         System.out.println("Masukkan Harga Baru");
                         dataAlat.get(ubahAlat - 1).setHarga(sc.nextInt());
